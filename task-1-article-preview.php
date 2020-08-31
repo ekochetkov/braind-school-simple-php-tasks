@@ -1,27 +1,40 @@
 <?php
 
-function htmlMakeLink($title, $href)
-{
-    return sprintf(
-        '<a href="%s">%s</a>',
-        $href,
-        $title
-    );
-}
+namespace BraindSchool;
 
-function articleMakePreview($content, $link, $length = 200)
-{
+class Task1 {
 
-    $short_content = mb_substr($content, 0, $length);
+    var $content;
+    var $link;
 
-    $words = explode(' ', $short_content);
+    function __construct($content, $link) {
+        $this->content = $content;
+        $this->link    = $link;
+    }
 
-    $short_content_body = implode(' ', array_slice($words, 0, count($words) - 3));
-
-    $short_content_link = htmlMakeLink(
-        implode(' ', array_slice($words, count($words) - 3, 3)) . '...',
-        $link
-    );
-
-    return $short_content_body . ' ' . $short_content_link;
+    static function htmlMakeLink($title, $href)
+    {
+        return sprintf(
+            '<a href="%s">%s</a>',
+            $href,
+            $title
+        );
+    }
+    
+    function articleMakePreview($length = 200)
+    {
+    
+        $short_content = mb_substr($this->content, 0, $length);
+    
+        $words = explode(' ', $short_content);
+    
+        $short_content_body = implode(' ', array_slice($words, 0, count($words) - 3));
+    
+        $short_content_link = self::htmlMakeLink(
+            implode(' ', array_slice($words, count($words) - 3, 3)) . '...',
+            $this->link
+        );
+    
+        return $short_content_body . ' ' . $short_content_link;
+    }
 }

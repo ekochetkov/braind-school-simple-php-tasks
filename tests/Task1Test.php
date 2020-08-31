@@ -4,6 +4,7 @@ require('vendor/autoload.php');
 require('task-1-article-preview.php');
 
 use PHPUnit\Framework\TestCase;
+use BraindSchool\Task1;
 
 class Task1Test extends TestCase
 {
@@ -15,15 +16,11 @@ class Task1Test extends TestCase
         $articleText = 'A b c a. Ddes e f';
         $articleLink = 'http://example.com/?id=123';
 
-        $articlePreview = articleMakePreview(
-            $articleText,
-            $articleLink,
-            11
-        );
+        $task1 = new Task1($articleText,$articleLink);
 
         $this->assertEquals(
             'A b <a href="http://example.com/?id=123">c a. Dd...</a>',
-            $articlePreview
+            $task1->articleMakePreview(11)
         );
     }
 
@@ -35,15 +32,11 @@ class Task1Test extends TestCase
         $articleText = 'A b c a. D e f';
         $articleLink = 'http://example.com/?id=123';
 
-        $articlePreview = articleMakePreview(
-            $articleText,
-            $articleLink,
-            12
-        );
+        $task1 = new Task1($articleText,$articleLink);
 
         $this->assertEquals(
             'A b c <a href="http://example.com/?id=123">a. D e...</a>',
-            $articlePreview
+            $task1->articleMakePreview(12)
         );
     }
 }

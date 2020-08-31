@@ -1,36 +1,51 @@
 <?php
 
-function mySort($a,$b){
+namespace BraindSchool;
 
-    $a_s = strval($a);
-    $b_s = strval($b);
+class Task3 {
 
-    for($i=0;$i<strlen($a_s)&&$i<strlen($b_s);$i++){
+    var $arrOfN;
+    var $n;
+    
+    function __construct($n) {
 
-        if( intval($a_s[$i]) < intval($b_s[$i]) )
-            return -1;
+        $this->n = $n;
 
-        if( intval($a_s[$i]) > intval($b_s[$i]) )
-            return 1;
+        $this->arrOfN = range(1,$n);
+
+        usort( $this->arrOfN, ['BraindSchool\Task3','mySort'] );
 
     }
 
-    if( $i < strlen($a_s) )
-        return 1;
+    function mySort($a,$b){
 
-    if( $i < strlen($b_s) )
-        return -1;
+        $a_s = strval($a);
+        $b_s = strval($b);
 
-    return 0;
+        for($i=0;$i<strlen($a_s)&&$i<strlen($b_s);$i++){
 
-}
+            if( intval($a_s[$i]) < intval($b_s[$i]) )
+                return -1;
 
-function getIndexOfK($n,$k){
+            if( intval($a_s[$i]) > intval($b_s[$i]) )
+                return 1;
 
-    $arrOfN = range(1,$n);
+        }
 
-    usort( $arrOfN, 'mySort' );
+        if( $i < strlen($a_s) )
+            return 1;
 
-    return array_search($k,$arrOfN) + 1;
+        if( $i < strlen($b_s) )
+            return -1;
+
+        return 0;
+
+    }
+
+    function getIndexOfK($k){
+
+        return array_search($k,$this->arrOfN) + 1;
+
+    }
 
 }
