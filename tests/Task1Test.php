@@ -16,7 +16,7 @@ class Task1Test extends TestCase
         $articleText = 'A b c a. Ddes e f';
         $articleLink = 'http://example.com/?id=123';
 
-        $task1 = new Task1($articleText,$articleLink);
+        $task1 = new Task1($articleText, $articleLink);
 
         $this->assertEquals(
             'A b <a href="http://example.com/?id=123">c a. Dd...</a>',
@@ -32,7 +32,7 @@ class Task1Test extends TestCase
         $articleText = 'A b c a. D e f';
         $articleLink = 'http://example.com/?id=123';
 
-        $task1 = new Task1($articleText,$articleLink);
+        $task1 = new Task1($articleText, $articleLink);
 
         $this->assertEquals(
             'A b c <a href="http://example.com/?id=123">a. D e...</a>',

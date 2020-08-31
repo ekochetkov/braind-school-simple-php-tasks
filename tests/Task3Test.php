@@ -61,5 +61,4 @@ class Task3Test extends TestCase
             $task3->getIndexOfK($k)
         );
     }
-
 }

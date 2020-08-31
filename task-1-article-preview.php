@@ -2,12 +2,14 @@
 
 namespace BraindSchool;
 
-class Task1 {
+class Task1
+{
 
     var $content;
     var $link;
 
-    function __construct($content, $link) {
+    function __construct($content, $link)
+    {
         $this->content = $content;
         $this->link    = $link;
     }
@@ -20,21 +22,21 @@ class Task1 {
             $title
         );
     }
-    
+
     function articleMakePreview($length = 200)
     {
-    
+
         $short_content = mb_substr($this->content, 0, $length);
-    
+
         $words = explode(' ', $short_content);
-    
+
         $short_content_body = implode(' ', array_slice($words, 0, count($words) - 3));
-    
+
         $short_content_link = self::htmlMakeLink(
             implode(' ', array_slice($words, count($words) - 3, 3)) . '...',
             $this->link
         );
-    
+
         return $short_content_body . ' ' . $short_content_link;
     }
 }

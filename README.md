@@ -1,5 +1,7 @@
 # Школа разработчиков #2. Тестовое задание
 
+Перейти к [решению](https://github.com/ekochetkov/braind-school-simple-php-tasks#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5).
+
 Мы будем смотреть на правильность выполнения заданий, качество кода, аккуратность. Это тестовое задание будет учитываться не только при поступлении, но и при переходе с первого этапа на второй, поэтому постарайся показать максимум своих возможностей. Результат выполнения всех заданий можно положить в один репозиторий.
 
 ## Задание 1. Реализовать скрипт на PHP
@@ -18,10 +20,10 @@
 
 Определи минимальное количество коммитов, нужное для исправления всех багов. Напиши php-скрипт, который определит минимальное количество коммитов, необходимых для исправления кода.
 
-|| Описание | Пример |
-|-|-|-|
-| **Входные данные** | В форму на странице можно ввести два числа N, M (0 ≤ N, M ≤ 1000). | 3 3 |
-| **Выходные данные** | Нужно вывести одно число – минимальное количество коммитов, или -1, если исправить код Пети невозможно. | 9 |
+|                     | Описание                                                                                                | Пример |
+| ------------------- | ------------------------------------------------------------------------------------------------------- | ------ |
+| **Входные данные**  | В форму на странице можно ввести два числа N, M (0 ≤ N, M ≤ 1000).                                      | 3 3    |
+| **Выходные данные** | Нужно вывести одно число – минимальное количество коммитов, или -1, если исправить код Пети невозможно. | 9      |
 
 ## Задание 3. Помочь ученикам в изучении странной математики
 
@@ -38,11 +40,11 @@
 
 Запуск всех тестов: `vendor\bin\phpunit tests`
 
-| Задание | Реализация | Тесты |
-| --- | --- | --- |
-| Задание 1. Реализовать скрипт на PHP |  [`task-1-article-preview.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-1-article-preview.php) |  [`tests\Task1Test.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/tests/Task1Test.php) |
-|  Задание 2. Помочь программисту Пете победить эрроры и ворнинги |  [`task-2-help-programmer-Petya.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-2-help-programmer-Petya.php)<br>[`task-2-form.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-2-form.php) |  [`tests\Task2Test.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/tests/Task2Test.php) |
-| Задание 3. Помочь ученикам в изучении странной математики |  [`task-3-strange-math.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-3-strange-math.php) |  [`tests\Task3Test.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/tests/Task3Test.php) |
+| Задание                                                        | Реализация                                                                                                                                                                                                                                                       | Тесты                                                                                                                 |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Задание 1. Реализовать скрипт на PHP                           | [`task-1-article-preview.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-1-article-preview.php)                                                                                                                              | [`tests\Task1Test.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/tests/Task1Test.php) |
+| Задание 2. Помочь программисту Пете победить эрроры и ворнинги | [`task-2-help-programmer-Petya.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-2-help-programmer-Petya.php)<br>[`task-2-form.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-2-form.php) | [`tests\Task2Test.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/tests/Task2Test.php) |
+| Задание 3. Помочь ученикам в изучении странной математики      | [`task-3-strange-math.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/task-3-strange-math.php)                                                                                                                                    | [`tests\Task3Test.php`](https://github.com/ekochetkov/braind-school-simple-php-tasks/blob/master/tests/Task3Test.php) |
 
 ## Комментарий к заданию 1.
 
