@@ -2,15 +2,17 @@
 
 namespace BraindSchool;
 
+/**
+ * Task3 - Решение задания 3. Помочь ученикам в изучении странной математики
+ */
 class Task3
 {
 
     var $arrOfN;
     var $n;
-
+    
     function __construct($n)
     {
-
         $this->n = $n;
 
         $this->arrOfN = range(1, $n);
@@ -18,9 +20,17 @@ class Task3
         usort($this->arrOfN, ['BraindSchool\Task3', 'mySort']);
     }
 
+        
+    /**
+     * mySort Сравнение двух чисел в соответствии с правилами
+     * "странной" математики
+     *
+     * @param  integer $a
+     * @param  integer $b
+     * @return integer
+     */
     function mySort($a, $b)
     {
-
         $a_s = strval($a);
         $b_s = strval($b);
 
@@ -41,10 +51,16 @@ class Task3
 
         return 0;
     }
-
+    
+    /**
+     * getIndexOfK Нахождение места заданного числа k в порядке,
+     * определенной странной математикой
+     *
+     * @param  integer $k
+     * @return integer
+     */
     function getIndexOfK($k)
     {
-
         return array_search($k, $this->arrOfN) + 1;
     }
 }

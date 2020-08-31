@@ -2,9 +2,20 @@
 
 namespace BraindSchool;
 
+/**
+ * Task2 Решение задания 2. Помочь программисту Пете победить эрроры и ворнинги
+ */
 class Task2
 {
-
+    
+    /**
+     * getMinPathFromPoint Получение минимального количества шагов к позиции (0, 0)
+     *
+     * @param  integer $f количество ерроров
+     * @param  integer $w количество ворнингов
+     * @param  array $map хранение минимального количества шагов к позиции (0, 0) из заданной координаты
+     * @return integer
+     */
     static function getMinPathFromPoint($f, $w, &$map)
     {
 
@@ -38,6 +49,13 @@ class Task2
         return $map[$f][$w];
     }
 
+    /**
+     * minCommits Поиск минимального числа коммитов методом динамического программирования
+     *
+     * @param  integer $f количество ерроров
+     * @param  integer $w количество ворнингов
+     * @return integer
+     */
     static function minCommits($f, $w)
     {
 
@@ -49,7 +67,14 @@ class Task2
 
         return $map[$f][$w] >= PHP_INT_MAX ? -1 : $map[$f][$w];
     }
-
+    
+    /**
+     * minCommitsV2 Арифметический поиск минимального числа коммитов
+     *
+     * @param  integer $f количество ерроров
+     * @param  integer $w количество ворнингов
+     * @return integer
+     */
     static function minCommitsV2($f, $w)
     {
 

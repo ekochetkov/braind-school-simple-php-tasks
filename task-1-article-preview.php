@@ -2,6 +2,9 @@
 
 namespace BraindSchool;
 
+/**
+ * Task1 Решение задания 1. Реализовать скрипт на PHP
+ */
 class Task1
 {
 
@@ -22,7 +25,13 @@ class Task1
             $title
         );
     }
-
+    
+    /**
+     * articleMakePreview Формирование содержимого предпросмотра статьи
+     *
+     * @param  integer $length Количество символов для разделения
+     * @return void
+     */
     function articleMakePreview($length = 200)
     {
 
