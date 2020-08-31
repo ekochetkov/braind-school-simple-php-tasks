@@ -12,17 +12,17 @@ class Task1Test extends TestCase
 
         //                        1
         //              01234567890123
-        $articleText = 'A b c a. D e f';
+        $articleText = 'A b c a. Ddes e f';
         $articleLink = 'http://example.com/?id=123';
 
         $articlePreview = articleMakePreview(
             $articleText,
             $articleLink,
-            10
+            11
         );
 
         $this->assertEquals(
-            'A b <a href="http://example.com/?id=123">c a. D...</a>',
+            'A b <a href="http://example.com/?id=123">c a. Dd...</a>',
             $articlePreview
         );
     }
